@@ -24,12 +24,42 @@ public  class AddressBook {
 		String mail=sc.next();
 		contactList[increment++]=new  ContactInfo(fn, ln, add, city, state,zip,country,mob,mail);
 		return increment;
-		
+	 }
+	void Edit(int increment)
+	{
+		int flag;
+		for(flag=0;flag<10;flag++)
+		{
+			if(flag==increment)
+			{
+			
+				System.out.println("Enter First Name:");
+			 	String fn=sc.next();
+      		System.out.println("Enter last name:");
+      		String ln=sc.next();
+      		System.out.println("Enter Address:");
+      		String add=sc.next();
+      		System.out.println("Enter City:");
+      		String city=sc.next();
+      		System.out.println("Enter State:");
+      		String state=sc.next();
+      		System.out.println("Enter postal_code:");
+      		String zip=sc.next();
+      		System.out.println("Enter Country:");
+      		String country=sc.next();
+      		System.out.println("Enter contact number:");
+      		String mob=sc.next();
+      		System.out.println("Enter email :");
+      		String mail=sc.next();
+      		contactList[increment++]=new  ContactInfo(fn, ln, add, city, state,zip,country,mob,mail);
+				break;
+			}
+		}
+		System.out.println("Your changes replicated to the Book manager successfully....");
 	}
-	
 	public static void main(String args[]){
+		Scanner sc=new Scanner(System.in);
 		AddressBook ab=new AddressBook();
-		ab.toString();
-		System.out.println("adding credentials to the MAnager");
+		ab.Edit(0); 
 	}
 }
