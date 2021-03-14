@@ -102,7 +102,8 @@ public static void main(String args[]){
 					ab.display();
 					break;
 				case 3:
-					System.out.println("currently you are in Delete-mode \n once you delete it's not revert back");
+					System.out.println("currently you are in Delete-mode ,once you delete it's not revert back \n");
+					System.out.println("Enter record number to delete :");
 					int record_del=sc.nextInt();
 					ab.remove(record_del);
 					break;
