@@ -174,7 +174,7 @@ public class AddressBook {
 	    	System.out.println(contactbook.stream().collect(Collectors.groupingBy((ContactInfo C) ->C.getState(),Collectors.counting())));
 	    }
 	public void sortPerson()
-		{
+		{     //ContactInfo::getFirstName
 			System.out.println("------Names are sorted alphabetical order----");
 	    	contactbook.stream().sorted(Comparator.comparing(contactInfo -> contactInfo.getFirstName())).forEach(contactInfo -> System.out.println(contactInfo));
 		}
